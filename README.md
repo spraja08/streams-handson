@@ -22,7 +22,7 @@ The objectives of this section is to
 
 4. In the Steps section, add a step with the following details.  This will start a long running YARN session in the "detached" mode  where the job manager gets 1 GB of heap space and the task managers 4 GB of heap space assigned. 
 
-   ![](./resources/Screenshot 2020-09-16 at 10.17.20 PM.png)
+   ![Steps configuration](./resources/Screenshot 2020-09-16 at 10.17.20 PM.png)
 
    
 
