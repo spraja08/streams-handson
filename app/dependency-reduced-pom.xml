@@ -44,7 +44,7 @@
               </filters>
               <transformers>
                 <transformer>
-                  <mainClass>com.amazonaws.services.kinesisanalytics.BasicStreamingJob</mainClass>
+                  <mainClass>com.amazonaws.streams.StreamingJob</mainClass>
                 </transformer>
               </transformers>
             </configuration>
