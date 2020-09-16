@@ -92,6 +92,8 @@ The objectives of this section is to
 
 4. The input messages will be processed by the application which can be seen from the Taskmanager's log (Stdout) as below![](https://github.com/rspamzn/streams-handson/blob/master/resources/flinklogs.png)
 
+5. Alternatively, the Kinesis Data Streams monitoring page will also show the number of records written as a proof that the application is processing the data as and when its available. ![](https://github.com/rspamzn/streams-handson/blob/master/resources/kdsmon.png)
+
 
 
 
