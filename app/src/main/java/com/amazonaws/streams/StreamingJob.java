@@ -13,6 +13,8 @@ import java.util.Map;
 import java.util.Properties;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import java.text.SimpleDateFormat;  
+import java.text.DateFormat;  
 
 /**
  * A basic Kinesis Data Analytics for Java application with Kinesis data
@@ -66,7 +68,8 @@ public class StreamingJob {
         DataStream<String> input = createSourceFromStaticConfig(env)
                                    .map( (eventStr) -> {
                                       JsonObject jobj = ( JsonObject ) JsonParser.parseString (eventStr);
-                                      jobj.addProperty( "PROCESSED_TIME", new java.util.Date().getTime() );
+                                      DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");  
+                                      jobj.addProperty( "PROCESSED_TIME", dateFormat.format( new java.util.Date().getTime() ) );
                                       return jobj.toString();
                                    } );
 

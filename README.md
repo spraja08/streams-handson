@@ -50,9 +50,47 @@ The objectives of this section is to
 
 ### Part 3 - Preparing to Run Job
 
-1. 
+1. Clone the repository https://github.com/rspamzn/streams-handson This contains the following artifacts
 
+   - The app folder contains a simple Java application that we will use for testing. This Application reads data from a Kinesis Data Stream (ExampleInputStream) and publish the output( by adding the PROCESSED_TIME attribute) to another Kinesis Stream (ExampleOutputStream). Before we submit this application, we will create these Kinesis Data Streams and enable appropriate permissions.
+   - The eventgen folder contains a python program that will generate and push the input data into ExampleInputStream.
 
+2. Create the ExampleInputStream and ExampleOutputStream using the [instructions here](https://docs.aws.amazon.com/streams/latest/dev/amazon-kinesis-streams.html)
+
+3. Copy the target jar file into the master node so that it can be submitted later. Replace the keypair and the node IP.
+
+   ```
+   scp -i ~/cloudLabs/SteamKeyPair.pem ./aws-kinesis-analytics-java-apps-1.0.jar  hadoop@ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com:~/
+   ```
+
+4. Allow the permissions
+
+   
+
+### Part 4 - Run the Job
+
+1. Ssh into the master node and submit the application using the following command 
+
+   ```
+   flink run -m yarn-cluster ./aws-kinesis-analytics-java-apps-1.0.jar
+   ```
+
+   The job will be submitted with a valid Jobid created with the status message similar to below
+
+   ```
+   Found Web Interface ip-172-31-35-41.ap-southeast-1.compute.internal:44861 of application 'application_1600269053659_0002'.
+   Job has been submitted with JobID ae389833110e05c94196b06f10533108
+   ```
+
+2. The Flink's web console will now display the running job as below![](https://github.com/rspamzn/streams-handson/blob/master/resources/submitted.png)
+
+3. Start pumping input data using the python script as below
+
+   ```
+   python stock.py
+   ```
+
+4. The input messages will be processed by the application which can be seen from the Taskmanager's log (Stdout) as below![](https://github.com/rspamzn/streams-handson/blob/master/resources/flinklogs.png)
 
 
 
