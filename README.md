@@ -6,7 +6,7 @@ The objectives of this section is to
 2. Make Flink Dashboard accessible externally
 3. Deploy, test and monitor a Flink application
 
-#### Part 1 - Launch Cluster
+### Part 1 - Launch Cluster
 
 1. Log into AWS console and select EMR service. In the EMR service  page,  click on the "Create cluster" button and selet the "Go to advanced options" link.
 
@@ -32,7 +32,7 @@ The objectives of this section is to
 
    ![](https://github.com/rspamzn/streams-handson/blob/master/resources/running.png)
 
-#### Part 2 - Enable Flink Console Access
+### Part 2 - Enable Flink Console Access
 
 1. To access the Flink web console, we will use the SSH tunnel with port forwarding method. This method needs a browser extension  similar to FoxyProxy. Use the [instructions here](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-connect-master-node-proxy.html) to install and configure FoxyProxy on your browser.
 
@@ -44,9 +44,13 @@ The objectives of this section is to
    ssh -i SteamKeypair.pem  -N -L 8157:ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com:8088 -L 8158:ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com:20888 hadoop@ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com
    ```
 
-4. With SSH tunnel on, use the browser where the FoxyProxy is configured and access the url - http://localhost:8157. This will open the Resource Manager web interface. ![](https://github.com/rspamzn/streams-handson/blob/master/resources/applications.png)
+4. With SSH tunnel on, use the browser where the FoxyProxy is configured and access the url - http://localhost:8157. This will open the Resource Manager web interface. ![](https://github.com/rspamzn/streams-handson/blob/master/resources/applications.png). Click on the "Application Master" link as circled below.
 
+5. This link will not be accessible as the port 20888 is not open in the security configuration. Instead, we have enabled the SSH port forwarding earlier from the local port 8158. Replace the ip address and port to localhost and 8158 (http://localhost:8158/proxy/application_1600269053659_0001/#/overview). This will open Flink's web console as below.![](https://github.com/rspamzn/streams-handson/blob/master/resources/flinkweb.png)
 
+### Part 3 - Preparing to Run Job
+
+1. 
 
 
 

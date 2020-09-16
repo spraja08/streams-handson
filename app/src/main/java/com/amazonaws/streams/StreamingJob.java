@@ -66,7 +66,7 @@ public class StreamingJob {
         DataStream<String> input = createSourceFromStaticConfig(env)
                                    .map( (eventStr) -> {
                                       JsonObject jobj = ( JsonObject ) JsonParser.parseString (eventStr);
-                                      jobj.addProperty( "processedTime", new java.util.Date().getTime() );
+                                      jobj.addProperty( "PROCESSED_TIME", new java.util.Date().getTime() );
                                       return jobj.toString();
                                    } );
 
