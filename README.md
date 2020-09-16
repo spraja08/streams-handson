@@ -36,7 +36,7 @@ The objectives of this section is to
 
 1. To access the Flink web console, we will use the SSH tunnel with port forwarding method. This method needs a browser extension  similar to FoxyProxy. Use the [instructions here](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-connect-master-node-proxy.html) to install and configure FoxyProxy on your browser.
 
-2.  Add SSH to the inbound rules of the security group associated with the master node. The security group can be found in the Summary tab -> Security and acces section as below ![](https://github.com/rspamzn/streams-handson/blob/master/resources/summary.png)
+2.  Add SSH to the inbound rules of the security group associated with the master node. The security group can be found in the Summary tab -> "Security and acces" section as below ![](https://github.com/rspamzn/streams-handson/blob/master/resources/summary.png)
 
 3. Set up the SSH tunnel to the master node using the [instructions here](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-ssh-tunnel-local.html). You may also use the following command by replacing the keypair name and the public DNS name for the master node. 
 
