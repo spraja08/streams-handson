@@ -42,7 +42,7 @@ Your application code is now stored in an Amazon S3 bucket where your applicatio
 
 4. For **Access permissions**, choose **Create / update IAM role `kinesis-analytics-MyApplication-us-east-1`**.
 
-   ![](https://github.com/rspamzn/streams-handson/blob/master/resources/kdacreate.png)
+   <kbd>![](https://github.com/rspamzn/streams-handson/blob/master/resources/kdacreate.png)</kbd>
 
    This action has created these IAM resources, named using your application name and Region as below. Edit the IAM policy to add permissions to access the Kinesis data streams
 
@@ -133,7 +133,7 @@ Your application code is now stored in an Amazon S3 bucket where your applicatio
 
 14. Choose **Update**.
 
-    ![](https://github.com/rspamzn/streams-handson/blob/master/resources/kdaupdate.png)
+    <kbd>![](https://github.com/rspamzn/streams-handson/blob/master/resources/kdaupdate.png)</kbd>
 
 
 
@@ -149,7 +149,7 @@ Your application code is now stored in an Amazon S3 bucket where your applicatio
 
    ![](https://github.com/rspamzn/streams-handson/blob/master/resources/appdag.png)
 
-3. The Kinesis Data Streams monitoring page will also show the number of records written as a verification that the application is processing the data as and when its available <kbd>![](https://github.com/rspamzn/streams-handson/blob/master/resources/processed.png)<kbd>
+3. The Kinesis Data Streams monitoring page will also show the number of records written as a verification that the application is processing the data as and when its available <kbd>![](https://github.com/rspamzn/streams-handson/blob/master/resources/processed.png)</kbd>
 
 ------
 
