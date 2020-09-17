@@ -32,6 +32,12 @@ The objectives of this section is to
 
    ![](https://github.com/rspamzn/streams-handson/blob/master/resources/running.png)
 
+   
+
+------
+
+
+
 ### Part 2 - Enable Flink Console Access
 
 1. To access the Flink web console, we will use the SSH tunnel with port forwarding method. This method needs a browser extension  similar to FoxyProxy. Use the [instructions here](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-connect-master-node-proxy.html) to install and configure FoxyProxy on your browser.
@@ -47,6 +53,12 @@ The objectives of this section is to
 4. With SSH tunnel on, use the browser where the FoxyProxy is configured and access the url - http://localhost:8157. This will open the Resource Manager web interface. ![](https://github.com/rspamzn/streams-handson/blob/master/resources/applications.png). Click on the "Application Master" link as circled below.
 
 5. This link will not be accessible as the port 20888 is not open in the security configuration. Instead, we have enabled the SSH port forwarding earlier from the local port 8158. Replace the ip address and port to localhost and 8158 (http://localhost:8158/proxy/application_1600269053659_0001/#/overview). This will open Flink's web console as below.![](https://github.com/rspamzn/streams-handson/blob/master/resources/flinkweb.png)
+
+   
+
+------
+
+
 
 ### Part 3 - Preparing to Run Job
 
@@ -89,7 +101,11 @@ The objectives of this section is to
 
 5. Add the newly created policy to EMR_EC2_DefaultRole. This is the role that is attached to all the EC2 instances that EMR launched for our cluster.![](https://github.com/rspamzn/streams-handson/blob/master/resources/policyadd.png)
 
-   
+
+
+------
+
+
 
 ### Part 4 - Run the Job
 
@@ -118,7 +134,9 @@ The objectives of this section is to
 
 5. Alternatively, the Kinesis Data Streams monitoring page will also show the number of records written as a proof that the application is processing the data as and when its available. ![](https://github.com/rspamzn/streams-handson/blob/master/resources/kdsmon.png)
 
+   
 
+------
 
 
 
