@@ -12,13 +12,13 @@ The objectives of this section of the hands-on is to
 
 2. Select the EMR release 5.30.0. Under the "Software Configuration" section, select Hadoop and Flink applications. EMR will provision these selected application frameworks during the cluster launch process.
 
-3. In the "Edit software settings" subsection, select the "Enter configuration" radio button and key in the following text
+3. In the "Edit software settings" subsection, select the "Enter configuration" radio button and key in the following text. EMR uses these configurations to override the default configurations after provisioning the applications. Refer [here]( https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html) for more info
 
    ```
    classification=flink-conf,properties=[taskmanager.numberOfTaskSlots=4,taskmanager.memory.flink.size=4g]
    ```
 
-4. In the Steps section, add a step with the following details.  This will start a long running YARN session in the "detached" mode  where the job manager gets 1 GB of heap space and the task managers 4 GB of heap space assigned. 
+4. In the Steps section, add a step with the following details. (Refer [here](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-overview.html#emr-work-cluster) to understand the concept of steps and clueter lifecycle) This will start a long running YARN session in the "detached" mode  where the job manager gets 1 GB of heap space and the task managers 4 GB of heap space assigned. 
 
    ```
    Jar Location : command-runner.jar
