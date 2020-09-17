@@ -2,7 +2,7 @@
 
 The objectives of Module2 are:
 
-1. To explore the deployment of the flink application from [Module1](https://github.com/rspamzn/streams-handson/blob/master/README.md) onto Kinesis Data Analytics 
+1. To explore the deployment of the flink application from [Module1](https://github.com/rspamzn/streams-handson) onto Kinesis Data Analytics 
 3. Test and monitor the application
 
 ###  Part 1 - Launch Cluster

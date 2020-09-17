@@ -6,7 +6,7 @@ This workshop has 2 modules. Module1 covers EMR with Flink, with the following o
 2. Make Flink's Web Console accessible externally
 3. Deploy, test and monitor a Flink streaming application that reads and writes to Kinesis Data Streams
 
-[Module 2](https://github.com/rspamzn/streams-handson/blob/master/module2.md) covers the steps involved in using Kinesis Data Analytics to deploy and operate the same flink streaming application.
+[Module 2](https://github.com/rspamzn/streams-handson/blob/master/Module2.md) covers the steps involved in using Kinesis Data Analytics to deploy and operate the same flink streaming application.
 
 ###  Part 1 - Launch Cluster
 
