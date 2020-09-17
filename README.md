@@ -129,7 +129,7 @@ This workshop has 2 modules. Module1 covers EMR with Flink, with the following o
    Job has been submitted with JobID ae389833110e05c94196b06f10533108
    ```
 
-2. The Flink's web console will now display the running job as below![](https://github.com/rspamzn/streams-handson/blob/master/resources/submitted.png)
+2. The Flink's web console will now display the running job as below<kbd>![](https://github.com/rspamzn/streams-handson/blob/master/resources/submitted.png)</kbd>
 
 3. Start pumping input data using the python script as below
 
