@@ -12,7 +12,7 @@ The objectives of this section of the hands-on is to
 
 2. Select the EMR release 5.30.0. Under the "Software Configuration" section, select Hadoop and Flink applications. EMR will provision these selected application frameworks during the cluster launch process.
 
-3. In the "Edit software settings" subsection, select the "Enter configuration" radio button and key in the following text. EMR uses these configurations to override the default configurations after provisioning the applications. Refer [here]( https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html) for more info
+3. In the "Edit software settings" subsection, select the "Enter configuration" radio button and key in the following text. EMR uses these configurations to override the defaults (in this case, the flin-conf.yaml) after provisioning the applications. Refer [here]( https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html) for more info
 
    ```
    classification=flink-conf,properties=[taskmanager.numberOfTaskSlots=4,taskmanager.memory.flink.size=4g]
