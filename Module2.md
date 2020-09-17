@@ -1,12 +1,9 @@
-# Streams Handson - Module 1
+# Streams Handson - Module 2
 
-This workshop has 2 modules. Module1 covers EMR with Flink, with the following objectives
+The objectives of Module2 are:
 
-1. Create an EMR Cluster with Flink runtime 
-2. Make Flink's Web Console accessible externally
-3. Deploy, test and monitor a Flink streaming application that reads and writes to Kinesis Data Streams
-
-[Module 2](https://github.com/rspamzn/streams-handson/blob/master/module2.md) covers the steps involved in using Kinesis Data Analytics to deploy and operate the same flink streaming application.
+1. To explore the deployment of the flink application from [Module1](https://github.com/rspamzn/streams-handson/blob/master/README.md) onto Kinesis Data Analytics 
+3. Test and monitor the application
 
 ###  Part 1 - Launch Cluster
 
