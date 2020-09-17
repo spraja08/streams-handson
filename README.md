@@ -1,10 +1,10 @@
 # Streams Handson
 
-The objectives of this section is to 
+The objectives of this section of the hands-on is to 
 
-1. Create an EMR Cluster with Flink runtime using AWS console
-2. Make Flink Dashboard accessible externally
-3. Deploy, test and monitor a Flink application
+1. Create an EMR Cluster with Flink runtime 
+2. Make Flink's Web Console accessible externally
+3. Deploy, test and monitor a Flink streaming application that reads and writes to Kinesis Data Streams
 
 ### Part 1 - Launch Cluster
 
