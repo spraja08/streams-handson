@@ -20,6 +20,11 @@ The objectives of this section is to
 
 4. In the Steps section, add a step with the following details.  This will start a long running YARN session in the "detached" mode  where the job manager gets 1 GB of heap space and the task managers 4 GB of heap space assigned. 
 
+   ```
+   Jar Location : command-runner.jar
+   Arguments    : flink-yarn-session -d -n 4 -jm 1024 -tm 4096
+   ```
+
    ![Steps configuration](https://github.com/rspamzn/streams-handson/blob/master/resources/steps.png)
 
 5. Click on the "Next" button and leave the Hardware Configurations to the defaults in the wizard. Click on the "Next" button
@@ -60,7 +65,7 @@ The objectives of this section is to
 
 
 
-### Part 3 - Preparing to Run Job
+### Part 3 - Preparing to Run the Job
 
 1. Clone the repository https://github.com/rspamzn/streams-handson This contains the following artifacts
 
