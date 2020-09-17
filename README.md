@@ -57,7 +57,7 @@ This workshop has 2 modules. Module1 covers EMR with Flink, with the following o
    ssh -i SteamKeypair.pem  -N -L 8157:ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com:8088 -L 8158:ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com:20888 hadoop@ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com
    ```
 
-4. With SSH tunnel on, use the browser where the FoxyProxy is configured and access the url - http://localhost:8157. This will open the Resource Manager web interface. ![](https://github.com/rspamzn/streams-handson/blob/master/resources/applications.png). Click on the **Application Master** link as circled below.
+4. With SSH tunnel on, use the browser where the FoxyProxy is configured and access the url - http://localhost:8157. This will open the Resource Manager web interface. <kbd>![](https://github.com/rspamzn/streams-handson/blob/master/resources/applications.png)</kbd>. Click on the **Application Master** link as circled below.
 
 5. This link will not be accessible as the port 20888 is not open in the security configuration. Instead, we have enabled the SSH port forwarding earlier from the local port 8158. Replace the ip address and port to localhost and 8158 (http://localhost:8158/proxy/application_1600269053659_0001/#/overview). This will open Flink's web console as below.<kbd>![](https://github.com/rspamzn/streams-handson/blob/master/resources/flinkweb.png)</kbd>
 
@@ -137,7 +137,7 @@ This workshop has 2 modules. Module1 covers EMR with Flink, with the following o
    python stock.py
    ```
 
-4. The input messages will be processed by the application which can be seen from the Taskmanager's log (Stdout) as below![](https://github.com/rspamzn/streams-handson/blob/master/resources/flinklogs.png)
+4. The input messages will be processed by the application which can be seen from the Taskmanager's log (Stdout) as below<kbd>![](https://github.com/rspamzn/streams-handson/blob/master/resources/flinklogs.png)</kbd>
 
 5. Alternatively, the Kinesis Data Streams monitoring page will also show the number of records written as a proof that the application is processing the data as and when its available. <kbd>![](https://github.com/rspamzn/streams-handson/blob/master/resources/kdsmon.png)</kbd>
 
