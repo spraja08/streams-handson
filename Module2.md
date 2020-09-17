@@ -149,7 +149,7 @@ Your application code is now stored in an Amazon S3 bucket where your applicatio
 
    ![](https://github.com/rspamzn/streams-handson/blob/master/resources/appdag.png)
 
-3. The Kinesis Data Streams monitoring page will also show the number of records written as a verification that the application is processing the data as and when its available ![](https://github.com/rspamzn/streams-handson/blob/master/resources/processed.png)
+3. The Kinesis Data Streams monitoring page will also show the number of records written as a verification that the application is processing the data as and when its available <kbd>![](https://github.com/rspamzn/streams-handson/blob/master/resources/processed.png)<kbd>
 
 ------
 
