@@ -54,7 +54,7 @@ This workshop has 2 modules. Module1 covers EMR with Flink, with the following o
 3. Set up the SSH tunnel to the master node using the [instructions here](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-ssh-tunnel-local.html). You may also use the following command by replacing the keypair name and the public DNS name for the master node. 
 
    ```
-   ssh -i SteamKeypair.pem  -N -L 8157:`ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com`:8088 -L 8158:`ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com`:20888 hadoop@`ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com`
+   ssh -i SteamKeypair.pem  -N -L 8157:ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com:8088 -L 8158:ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com:20888 hadoop@ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com
    ```
 
 4. With SSH tunnel on, use the browser where the FoxyProxy is configured and access the url - http://localhost:8157. This will open the Resource Manager web interface. ![](https://github.com/rspamzn/streams-handson/blob/master/resources/applications.png). Click on the **Application Master** link as circled below.
@@ -79,28 +79,28 @@ This workshop has 2 modules. Module1 covers EMR with Flink, with the following o
 3. Copy the target jar file into the master node so that it can be submitted later. Replace the keypair and the node IP.
 
    ```
-   scp -i `~/cloudLabs/SteamKeyPair.pem` ./aws-kinesis-analytics-java-apps-1.0.jar  hadoop@`ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com:~/`
+   scp -i ~/cloudLabs/SteamKeyPair.pem ./aws-kinesis-analytics-java-apps-1.0.jar  hadoop@ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com:~/
    ```
 
 4. At this point, we will enbale the permission for the streams application to read and write to the Kinesis Data Streams. Create an IAM policy using the json document as below.
 
    ```
    {
-       **Version**: **2012-10-17**,
-       **Statement**: [
-           {
-               **Sid**: **ReadInputStream**,
-               **Effect**: **Allow**,
-               **Action**: **kinesis:***,
-               **Resource**: *****
-           },
-           {
-               **Sid**: **WriteOutputStream**,
-               **Effect**: **Allow**,
-               **Action**: **kinesis:***,
-               **Resource**: *****
-           }
-       ]
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Sid": "ReadInputStream",
+         "Effect": "Allow",
+         "Action": "kinesis:*",
+         "Resource": "*"
+       },
+       {
+         "Sid": "WriteOutputStream",
+         "Effect": "Allow",
+         "Action": "kinesis:*",
+         "Resource": "*"
+       }
+     ]
    }
    ```
 
