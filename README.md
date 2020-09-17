@@ -63,7 +63,31 @@ The objectives of this section is to
    scp -i ~/cloudLabs/SteamKeyPair.pem ./aws-kinesis-analytics-java-apps-1.0.jar  hadoop@ec2-13-250-29-109.ap-southeast-1.compute.amazonaws.com:~/
    ```
 
-4. Allow the permissions
+4. At this point, we will enbale the permission for the streams application to read and write to the Kinesis Data Streams. Create an IAM policy using the json document as below.
+
+   ```
+   {
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Sid": "ReadInputStream",
+               "Effect": "Allow",
+               "Action": "kinesis:*",
+               "Resource": "*"
+           },
+           {
+               "Sid": "WriteOutputStream",
+               "Effect": "Allow",
+               "Action": "kinesis:*",
+               "Resource": "*"
+           }
+       ]
+   }
+   ```
+
+   ![](https://github.com/rspamzn/streams-handson/blob/master/resources/policycreate.png)
+
+5. Add the newly created policy to EMR_EC2_DefaultRole. This is the role that is attached to all the EC2 instances that EMR launched for our cluster.![](https://github.com/rspamzn/streams-handson/blob/master/resources/policyadd.png)
 
    
 
